@@ -7,10 +7,10 @@ export const formEl = [
     label: "TextArea",
     value: "textarea",
   },
-  {
-    label: "Number",
-    value: "number",
-  },
+  // {
+  //   label: "Number",
+  //   value: "number",
+  // },
   {
     label: "Radio",
     value: "radio",

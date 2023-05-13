@@ -54,7 +54,7 @@ const NumberInput = ({
                 variant="outlined"
                 fullWidth
                 placeholder="Number Input Field"
-                disabled
+                // disabled
                 type="number"
               />
             </Grid>

@@ -144,8 +144,20 @@ const FormBuilder = () => {
     setData(newArr);
   };
 
-  //Function to Handle Time
+  //Function to Handle Text
   const handleTextInput = (id, inputVal) => {
+    let newArr = data.map((el) => {
+      if (el.id === id) {
+        return { ...el, dataInput: inputVal };
+      } else {
+        return el;
+      }
+    });
+    setData(newArr);
+  };
+
+  //Function to Handle TextArea
+  const handleTextInputTextArea = (id, inputVal) => {
     let newArr = data.map((el) => {
       if (el.id === id) {
         return { ...el, dataInput: inputVal };
@@ -214,17 +226,18 @@ const FormBuilder = () => {
             duplicateElement={duplicateElement}
           />
         );
-      case "number":
-        return (
-          <NumberInput
-            item={item}
-            handleValue={handleValue}
-            deleteEl={deleteEl}
-            handleRequired={handleRequired}
-            handleElType={handleElType}
-            duplicateElement={duplicateElement}
-          />
-        );
+      // case "number":
+      //   return (
+      //     <NumberInput
+      //       item={item}
+      //       handleValue={handleValue}
+      //       deleteEl={deleteEl}
+      //       handleRequired={handleRequired}
+      //       handleElType={handleElType}
+
+      //       duplicateElement={duplicateElement}
+      //     />
+      //   );
       case "radio":
         return (
           <RadioInput
